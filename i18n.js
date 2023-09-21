@@ -1,24 +1,4 @@
-// LANGUAGE SETTINGS
-function getCookie (name) {
-  const value = '; ' + document.cookie
-  const parts = value.split('; ' + name + '=')
-  if (parts.length === 2) return parts.pop().split(';').shift()
-}
-function setCookie (cname, cvalue, exhours) {
-  const d = new Date()
-  d.setTime(Date.now() + (exhours * 60 * 60 * 1000))
-  const expires = 'expires=' + d.toUTCString()
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
-}
-function setBodyClassUserLang (userLang) {
-  document.getElementsByTagName('body')[0].classList.add(`__i18n-${userLang}`)
-}
 
-const langElements = document.querySelectorAll('[data-i18n]')
-const userLang = (getCookie('lang') || navigator.language || navigator.userLanguage).replace(/-.*/, "")
-setBodyClassUserLang(userLang)
-
-const langPicker = document.getElementById('langPicker')
 
 var REPLACEMENTS = {
   colors: {
@@ -115,21 +95,6 @@ const getl10n = async (code) => {
 async function loadTranslation () { // eslint-disable-line no-unused-vars
   return Promise.all([
     getl10n('en'),
-    getl10n('es'),
-    getl10n('de'),
-    getl10n('cn'),
-    getl10n('ko'),
-    getl10n('pt'),
-    getl10n('ru'),
-    getl10n('sh'),
-    getl10n('pl'),
-    getl10n('fr'),
-    getl10n('ja'),
-    getl10n('cs'),
-    getl10n('it'),
-    getl10n('el'),
-    getl10n('oc'),
-    getl10n('uk')
   ]).then(() => {
     console.log(i18n)
 
