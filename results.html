@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700%7CRoboto:400,700" rel="stylesheet">
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <title>TherianValues Results</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    <meta charset="utf-8">
+    <script type="application/javascript" src="ideologies.js">
+    </script>
+</head>
+
+<body>
+    <h1>TherianValues</h1>
+    <hr>
+
+    <h1 data-i18n="result_h1">Results</h1>
+
+    <h2><span class="weight-300" id="a-label"></span></h2>
+    <div class="axis">
+        <img id="img-spiritual" src="value_images/spiritual.png" height="128pt" />
+        <div class="bar spiritual" id="bar-spiritual">
+            <div class="text-wrapper" id="spiritual"></div>
+        </div>
+        <div class="bar secular" id="bar-secular">
+            <div class="text-wrapper" id="secular"></div>
+        </div>
+        <img id="img-secular" src="value_images/secular.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="b-label"></span></h2>
+    <div class="axis">
+        <img id="img-ideal" src="value_images/ideal.png" height="128pt" />
+        <div class="bar ideal" id="bar-ideal">
+            <div class="text-wrapper" id="ideal"></div>
+        </div>
+        <div class="bar morphological" id="bar-morphological">
+            <div class="text-wrapper" id="morphological"></div>
+        </div>
+        <img id="img-morphological" src="value_images/morphological.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="c-label"></span></h2>
+    <div class="axis">
+        <img id="img-inhuman" src="value_images/inhuman.png" height="128pt" />
+        <div class="bar inhuman" id="bar-inhuman">
+            <div class="text-wrapper" id="inhuman"></div>
+        </div>
+        <div class="bar alterhuman" id="bar-alterhuman">
+            <div class="text-wrapper" id="alterhuman"></div>
+        </div>
+        <img id="img-alterhuman" src="value_images/alterhuman.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="d-label"></span></h2>
+    <div class="axis">
+        <img id="img-rewilding" src="value_images/rewilding.png" height="128pt" />
+        <div class="bar rewilding" id="bar-rewilding">
+            <div class="text-wrapper" id="rewilding"></div>
+        </div>
+        <div class="bar synthesis" id="bar-synthesis">
+            <div class="text-wrapper" id="synthesis"></div>
+        </div>
+        <img id="img-synthesis" src="value_images/synthesis.png" height="128pt" />
+    </div>
+    <h2><span class="weight-300" id="e-label"></span></h2>
+    <div class="axis">
+        <img id="img-assimilation" src="value_images/assimilation.png" height="128pt" />
+        <div class="bar assimilation" id="bar-assimilation">
+            <div class="text-wrapper" id="assimilation"></div>
+        </div>
+        <div class="bar liberation" id="bar-liberation">
+            <div class="text-wrapper" id="liberation"></div>
+        </div>
+        <img id="img-liberation" src="value_images/liberation.png" height="128pt" />
+    </div>
+    <h2 data-i18n="result_h2_match">Closest Match:<span class="weight-300" id="ideology-label"></span></h2>
+    <h3><span class="weight-300" id="ideodesc-label"></span></h3>
+    <p data-i18n="result_url"><br>You can send these results by copying and pasting the URL at the top of the page or
+        using the image below.</p>
+
+    <h2 data-i18n="result_h2_next_matches">Next closest matches</h2>
+    <p data-i18n="next_matches_percent">With your closest match as 100% and farthest as 0%, here is how closely you
+        matched the other ideologies.</p>
+
+    <dl id="next-matches"></dl>
+
+    <h2 data-i18n="index_h2_scores">I don't like my scores!</h2>
+    <p data-i18n="index_p_scores">Please remember that you are not intended to get a 100% score in any of the
+        categories. The point of the quiz is to challenge your views. If you have any suggestions or constructive
+        criticism please let us know via the GitHub page.</p>
+    <hr />
+    <canvas id="banner" width=800 height=1000 style="font-family:Montserrat"></canvas>
+    <button data-i18n="result_back" class="button" onclick="location.href='index.html';"
+        style="background-color: #2196f3;">Back</button> <br>
+    <!-- JavaScript for the test itself -->
+    <script type="application/javascript" src="i18n.js"></script>
+    <script>
+        /* global i18n, loadTranslation, ideologies */
+        function getQueryVariable (variable) {
+        var query = window.location.search.substring(1)
+        var vars = query.split('&')
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=')
+            if (pair[0] === variable) {
+            return pair[1]
+            }
+        }
+        return (NaN)
+        }
+
+        function setBarValue (name, value) {
+        const innerel = document.getElementById(name)
+        const outerel = document.getElementById('bar-' + name)
+        outerel.style.width = (value + '%')
+        innerel.innerHTML = (value + '%')
+        if (innerel.offsetWidth + 20 > outerel.offsetWidth) {
+            innerel.style.visibility = 'hidden'
+        }
+        }
+
+        function setLabel (val, ary) {
+        ary = ary.split(',')
+        if (val > 100) {
+            return ''
+        } else
+        if (val > 90) {
+            return ary[0]
+        } else
+        if (val > 75) {
+            return ary[1]
+        } else
+        if (val > 60) {
+            return ary[2]
+        } else
+        if (val >= 40) {
+            return ary[3]
+        } else
+        if (val >= 25) {
+            return ary[4]
+        } else
+        if (val >= 10) {
+            return ary[5]
+        } else
+        if (val >= 0) {
+            return ary[6]
+        } else {
+            return ''
+        }
+        }
+
+        function getIdeologyNameByIndex (name) {
+        return i18n.getString(`ideology_${name}_name`)
+        }
+
+        function getIdeologyDescriptionByIndex (name) {
+        return i18n.getString(`ideology_${name}_desc`)
+        }
+
+        const spiritual = getQueryVariable('a')
+        const ideal = getQueryVariable('b')
+        const inhuman = getQueryVariable('c')
+        const rewilding = getQueryVariable('d')
+        const assimilation = getQueryVariable('e')
+        const secular = (100 - spiritual).toFixed(1)
+        const morphological = (100 - ideal).toFixed(1)
+        const alterhuman = (100 - inhuman).toFixed(1)
+        const synthesis = (100 - rewilding).toFixed(1)
+        const liberation = (100 - assimilation).toFixed(1)
+
+        setBarValue('spiritual', spiritual)
+        setBarValue('secular', secular)
+        setBarValue('morphological', morphological)
+        setBarValue('ideal', ideal)
+        setBarValue('inhuman', inhuman)
+        setBarValue('alterhuman', alterhuman)
+        setBarValue('synthesis', synthesis)
+        setBarValue('rewilding', rewilding)
+        setBarValue('assimilation', assimilation)
+        setBarValue('liberation', liberation)
+
+        loadTranslation().then(() => {
+            document.getElementById('a-label').innerHTML = setLabel(spiritual, i18n.getString(
+                'result_a_label'))
+            document.getElementById('b-label').innerHTML = setLabel(ideal, i18n.getString(
+                'result_b_label'))
+            document.getElementById('c-label').innerHTML = setLabel(inhuman, i18n.getString('result_c_label'))
+            document.getElementById('d-label').innerHTML = setLabel(rewilding, i18n.getString(
+                'result_d_label'))
+            document.getElementById('e-label').innerHTML = setLabel(assimilation, i18n.getString('result_e_label'))
+
+            let ideology = ''
+            let ideodesc = ''
+            const ideologyIndexAndDistance = []
+            var closestMatch = {}
+
+            let index = 0
+            for (const name of Object.keys(ideologies)) {
+                let dist = 0
+                dist += Math.pow(Math.abs(ideologies[name].a - spiritual), 2)
+                dist += Math.pow(Math.abs(ideologies[name].c - inhuman), 2)
+                dist += Math.pow(Math.abs(ideologies[name].b - ideal), 2)
+                dist += Math.pow(Math.abs(ideologies[name].d - rewilding), 2)
+                dist += Math.pow(Math.abs(ideologies[name].e - assimilation), 2)
+
+                // ideologyToDistance[name] = dist
+                ideologyIndexAndDistance.push({
+                distance: dist,
+                name,
+                index
+                })
+                index++
+            }
+
+            ideologyIndexAndDistance.sort(function (a, b) {
+                return a.distance - b.distance
+            })
+
+            const distances = ideologyIndexAndDistance.map(function (indexAndDistance) {
+                return indexAndDistance.distance
+            })
+
+            const closestDistance = distances[0]
+            const farthestDistance = distances[distances.length - 1]
+            const distanceSpan = farthestDistance - closestDistance
+
+            closestMatch = ideologyIndexAndDistance[0]
+            document.getElementById('ideology-label').innerHTML = getIdeologyNameByIndex(closestMatch.name)
+            document.getElementById('ideodesc-label').innerHTML = getIdeologyDescriptionByIndex(closestMatch
+                .name)
+
+            const nextMatches = document.getElementById('next-matches')
+            nextMatches.innerHTML = ideologyIndexAndDistance.slice(1).map(function (indexAndDistance) {
+                const name = indexAndDistance.name
+                ideology = getIdeologyNameByIndex(name)
+                ideodesc = getIdeologyDescriptionByIndex(name)
+                const relativeDistance = 1 - (indexAndDistance.distance - closestDistance) /
+                                distanceSpan
+                const relativeDistancePercent = Math.round(relativeDistance * 1000) / 10
+                return '<dt>' + ideology + ': ' + relativeDistancePercent + '%</dt>' +
+                                '<dd>' + ideodesc + '</dd>'
+            }).join('\n')
+
+            const c = document.getElementById('banner')
+            const ctx = c.getContext('2d')
+            ctx.fillStyle = '#EEEEEE'
+            ctx.fillRect(0, 0, 800, 1000)
+
+            let img = document.getElementById('img-spiritual')
+            ctx.drawImage(img, 20, 170, 100, 100)
+            img = document.getElementById('img-secular')
+            ctx.drawImage(img, 680, 170, 100, 100)
+            img = document.getElementById('img-ideal')
+            ctx.drawImage(img, 20, 290, 100, 100)
+            img = document.getElementById('img-morphological')
+            ctx.drawImage(img, 680, 290, 100, 100)
+            img = document.getElementById('img-inhuman')
+            ctx.drawImage(img, 20, 410, 100, 100)
+            img = document.getElementById('img-alterhuman')
+            ctx.drawImage(img, 680, 410, 100, 100)
+            img = document.getElementById('img-rewilding')
+            ctx.drawImage(img, 20, 530, 100, 100)
+            img = document.getElementById('img-synthesis')
+            ctx.drawImage(img, 680, 530, 100, 100)
+            img = document.getElementById('img-assimilation')
+            ctx.drawImage(img, 20, 650, 100, 100)
+            img = document.getElementById('img-liberation')
+            ctx.drawImage(img, 680, 650, 100, 100)
+
+            ctx.fillStyle = '#222222'
+            ctx.fillRect(120, 180, 560, 80)
+            ctx.fillRect(120, 300, 560, 80)
+            ctx.fillRect(120, 420, 560, 80)
+            ctx.fillRect(120, 540, 560, 80)
+            ctx.fillRect(120, 660, 560, 80)
+            ctx.fillRect(120, 780, 560, 80)
+            ctx.fillRect(120, 900, 560, 80)
+            ctx.fillStyle = '#D8FFB8'
+            ctx.fillRect(120, 184, 5.6 * spiritual - 2, 72)
+            ctx.fillStyle = '#CC86EF'
+            ctx.fillRect(682 - 5.6 * secular, 184, 5.6 * secular - 2, 72)
+            ctx.fillStyle = '#073972'
+            ctx.fillRect(120, 304, 5.6 * ideal - 2, 72)
+            ctx.fillStyle = '#E2BC00'
+            ctx.fillRect(682 - 5.6 * morphological, 304, 5.6 * morphological - 2, 72)
+            ctx.fillStyle = '#8C175B'
+            ctx.fillRect(120, 424, 5.6 * inhuman - 2, 72)
+            ctx.fillStyle = '#597BC2'
+            ctx.fillRect(682 - 5.6 * alterhuman, 424, 5.6 * alterhuman - 2, 72)
+            ctx.fillStyle = '#0BA100'
+            ctx.fillRect(120, 544, 5.6 * rewilding - 2, 72)
+            ctx.fillStyle = '#8800FF'
+            ctx.fillRect(682 - 5.6 * synthesis, 544, 5.6 * synthesis - 2, 72)
+            ctx.fillStyle = '#00F7FF'
+            ctx.fillRect(120, 664, 5.6 * assimilation - 2, 72)
+            ctx.fillStyle = '#FF0800'
+            ctx.fillRect(682 - 5.6 * liberation, 664, 5.6 * liberation - 2, 72)
+            ctx.fillStyle = '#FF0800'
+
+            ctx.fillStyle = '#dddddd'
+            ctx.textAlign = 'left'
+            if (spiritual > 30) {
+                ctx.fillText(spiritual + '%', 130, 237.5)
+            }
+            if (ideal > 30) {
+                ctx.fillText(ideal + '%', 130, 357.5)
+            }
+            if (inhuman > 30) {
+                ctx.fillText(inhuman + '%', 130, 477.5)
+            }
+            if (rewilding > 30) {
+                ctx.fillText(rewilding + '%', 130, 597.5)
+            }
+            if (assimilation > 30) {
+                ctx.fillText(assimilation + '%', 130, 717.5)
+            }
+            ctx.textAlign = 'right'
+            if (secular > 30) {
+                ctx.fillText(secular + '%', 670, 237.5)
+            }
+            if (morphological > 30) {
+                ctx.fillText(morphological + '%', 670, 357.5)
+            }
+            if (alterhuman > 30) {
+                ctx.fillText(alterhuman + '%', 670, 477.5)
+            }
+            if (synthesis > 30) {
+                ctx.fillText(synthesis + '%', 670, 597.5)
+            }
+            if (liberation > 30) {
+                ctx.fillText(liberation + '%', 670, 717.5)
+            }
+
+            ctx.fillStyle = '#222222'
+            ctx.font = '300 30px Montserrat'
+            ctx.fillText('TherianValues.github.io', 780, 60)
+            ctx.textAlign = 'center'
+            ctx.fillText('' + document.getElementById('a-label').innerHTML, 400, 175)
+            ctx.fillText('' + document.getElementById('b-label').innerHTML, 400, 295)
+            ctx.fillText('' + document.getElementById('c-label').innerHTML, 400, 415)
+            ctx.fillText('' + document.getElementById('d-label').innerHTML, 400, 535)
+            ctx.fillText('' + document.getElementById('e-label').innerHTML, 400, 655)
+        })
+    </script>
+</body>
+
+</html>
