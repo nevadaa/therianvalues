@@ -183,89 +183,66 @@ div.text-wrapper {
     display: inline-block;
 }
 
-div.revolution {
-    background-color: #890000;
+div.spiritual {
+    background-color: #D8FFB8;
     text-align: left;
     border-right-style: solid;
 }
 
-div.reform {
-    background-color: #FC5959;
+div.secular {
+    background-color: #CC86EF;
     text-align: right;
     border-left-style: solid;
 }
 
-div.central {
-    background-color: #560000;
+div.morphological {
+    background-color: #E2BC00;
     text-align: left;
     border-right-style: solid;
 }
 
-div.decentral {
-    background-color: #000000;
+div.ideal {
+    background-color: #073972;
     text-align: right;
     border-left-style: solid;
 }
 
-div.utopian {
-    background-color: #7F0037;
+div.inhuman {
+    background-color: #8C175B;
     text-align: right;
     border-left-style: solid;
 }
 
-div.scientific {
-    background-color: #88232B;
+div.alterhuman {
+    background-color: #597BC2;
     text-align: left;
     border-right-style: solid;
 }
 
-div.national {
-    background-color: #7F3300;
+div.synthesis {
+    background-color: #8800FF;
     text-align: right;
     border-left-style: solid;
 }
 
-div.international {
-    background-color: #782F52;
+div.rewilding {
+    background-color: #0BA100;
     text-align: left;
     border-right-style: solid;
 }
 
-div.party {
-    background-color: #963B33;
+div.assimilation {
+    background-color: #00F7FF;
     text-align: left;
     border-right-style: solid;
 }
 
-div.union {
-    background-color: #7F333B;
+div.liberation {
+    background-color: #FF0800;
     text-align: right;
     border-left-style: solid;
 }
 
-div.industry {
-    background-color: #804E00;
-    text-align: left;
-    border-right-style: solid;
-}
-
-div.ecology {
-    background-color: #76890B;
-    text-align: right;
-    border-left-style: solid;
-}
-
-div.conservative {
-    background-color: #27577A;
-    text-align: left;
-    border-right-style: solid;
-}
-
-div.progressive {
-    background-color: #C4A717;
-    text-align: right;
-    border-left-style: solid;
-}
 
 span.weight-300 {
     font-weight: 300;
