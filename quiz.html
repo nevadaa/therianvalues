@@ -35,10 +35,10 @@
     <script type="application/javascript" src="i18n.js"></script>
     <script>
         /* global i18n, loadTranslation, questions */
-        let maxA, maxB, maxC, maxD, maxE, maxF, maxG // Max possible scores
-        maxA = maxB = maxC = maxD = maxE = maxF = maxG = 0
-        let a, b, c, d, e, f, g // User's scores
-        a = b = c = d = e = f = g = 0
+        let maxA, maxB, maxC, maxD, maxE // Max possible scores
+        maxA = maxB = maxC = maxD = maxE = 0
+        let a, b, c, d, e // User's scores
+        a = b = c = d = e = 0
         let qn = [] // Array of question numbers
         let qi = 0 // Question index
         populateQn()
@@ -65,8 +65,6 @@
         c += mult * questions[`question_${qn[qi]}`].c
         d += mult * questions[`question_${qn[qi]}`].d
         e += mult * questions[`question_${qn[qi]}`].e
-        f += mult * questions[`question_${qn[qi]}`].f
-        g += mult * questions[`question_${qn[qi]}`].g
         qi++
         prevAnswer = mult
         if (qn[qi] < Object.size(questions)) {
@@ -86,8 +84,6 @@
         c -= prevAnswer * questions[`question_${qn[qi]}`].c
         d -= prevAnswer * questions[`question_${qn[qi]}`].d
         e -= prevAnswer * questions[`question_${qn[qi]}`].e
-        f -= prevAnswer * questions[`question_${qn[qi]}`].f
-        g -= prevAnswer * questions[`question_${qn[qi]}`].g
         prevAnswer = null
         initQuestion()
         }
@@ -118,9 +114,7 @@
                         `&b=${calcScore(b, maxB)}` +
                         `&c=${calcScore(c, maxC)}` +
                         `&d=${calcScore(d, maxD)}` +
-                        `&e=${calcScore(e, maxE)}` +
-                        `&f=${calcScore(f, maxF)}` +
-                        `&g=${calcScore(g, maxG)}`
+                        `&e=${calcScore(e, maxE)}` 
         }
         loadTranslation().then(() => {
         initQuestion()
@@ -130,8 +124,6 @@
             maxC += Math.abs(questions[`question_${i}`].c)
             maxD += Math.abs(questions[`question_${i}`].d)
             maxE += Math.abs(questions[`question_${i}`].e)
-            maxF += Math.abs(questions[`question_${i}`].f)
-            maxG += Math.abs(questions[`question_${i}`].g)
         }
         })
     </script>
