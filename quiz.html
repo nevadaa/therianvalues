@@ -11,121 +11,98 @@
 </head>
 
 <body>
-    <script type="application/javascript" src="questions.js">
+    <script type="application/javascript"
+    src="questions.js">
+</script>
     </script>
     <h1>TherianValues</h1>
     <hr>
-    <h2 data-i18n="quiz_loading" style="text-align:center;" id="question-number">Loading...</h2>
+    <h2 style="text-align:center;" id="question-number">Loading...</h2>
     <p class="question" id="question-text"></p>
-    <button data-i18n="quiz_strongly_agree" class="button" onclick="nextQuestion( 1.0)"
-        style="background-color: #1b5e20;">Strongly Agree</button> <br>
-    <button data-i18n="quiz_agree" class="button" onclick="nextQuestion( 0.5)"
-        style="background-color: #4caf50;">Agree</button> <br>
-    <button data-i18n="quiz_neutral" class="button" onclick="nextQuestion( 0.0)"
-        style="background-color: #bbbbbb;">Neutral/Unsure</button> <br>
-    <button data-i18n="quiz_disagree" class="button" onclick="nextQuestion(-0.5)"
-        style="background-color: #f44336;">Disagree</button> <br>
-    <button data-i18n="quiz_strongly_disagree" class="button" onclick="nextQuestion(-1.0)"
-        style="background-color: #b71c1c;">Strongly Disagree</button> <br>
-    <button data-i18n="quiz_back" class="small_button" onclick="prevQuestion()" id="back_button">Back</button>
-    <button data-i18n="quiz_back" class="small_button_off" id="back_button_off">Back</button>
+    <button class="button stronglyAgree" onclick="next_question( 1.0)">Strongly Agree</button> <br>
+    <button class="button agree" onclick="next_question( 0.5)">Agree</button> <br>
+    <button class="button neutral" onclick="next_question( 0.0)">Neutral/Unsure</button> <br>
+    <button class="button disagree" onclick="next_question(-0.5)">Disagree</button> <br>
+    <button class="button stronglyDisagree" onclick="next_question(-1.0)">Strongly Disagree</button> <br>
+    <button class="small_button" onclick="prev_question()" id="back_button">Back</button>
+    <button class="small_button_off" id="back_button_off">Back</button><br>
     <br>
 
     <!-- JavaScript for the test itself -->
-    <script type="application/javascript" src="i18n.js"></script>
     <script>
-        /* global i18n, loadTranslation, questions */
-        let maxA, maxB, maxC, maxD, maxE // Max possible scores
-        maxA = maxB = maxC = maxD = maxE = 0
-        let a, b, c, d, e // User's scores
-        a = b = c = d = e = 0
-        let qn = [] // Array of question numbers
-        let qi = 0 // Question index
-        populateQn()
-        let prevAnswer = null
-
-        function initQuestion () {
-        document.getElementById('question-text').innerHTML = i18n.getString(`question_${qn[qi]}`)
-        document.getElementById('question-number').innerHTML = i18n.getString('quiz_question_of', {
-            count: qi + 1,
-            total: Object.size(questions)
-        })
-        if (prevAnswer == null) {
-            document.getElementById('back_button').style.display = 'none'
-            document.getElementById('back_button_off').style.display = 'block'
-        } else {
-            document.getElementById('back_button').style.display = 'block'
-            document.getElementById('back_button_off').style.display = 'none'
+        var max_spirsec, max_idmor, max_inhalt, max_rewsyn, max_asslib; // Max possible scores
+        max_spirsec = max_idmor = max_inhalt = max_rewsyn = max_asslib = 0;
+        let spirsec_array = new Array(questions.length);
+        let idmor_array = new Array(questions.length);
+        let inhalt_array = new Array(questions.length);
+        let rewsyn_array = new Array(questions.length);
+        let asslib_array = new Array(questions.length);
+        var qn = 0; // Question number
+        init_question();
+        for (var i = 0; i < questions.length; i++) {
+            max_spirsec += Math.abs(questions[i].effect.spirsec)
+            max_idmor += Math.abs(questions[i].effect.idmor)
+            max_inhalt += Math.abs(questions[i].effect.inhalt)
+            max_rewsyn += Math.abs(questions[i].effect.rewsyn)
+            max_asslib += Math.abs(questions[i].effect.asslib)
         }
-        }
-
-        function nextQuestion (mult) { // eslint-disable-line no-unused-vars
-        a += mult * questions[`question_${qn[qi]}`].a
-        b += mult * questions[`question_${qn[qi]}`].b
-        c += mult * questions[`question_${qn[qi]}`].c
-        d += mult * questions[`question_${qn[qi]}`].d
-        e += mult * questions[`question_${qn[qi]}`].e
-        qi++
-        prevAnswer = mult
-        if (qn[qi] < Object.size(questions)) {
-            initQuestion()
-        } else {
-            results()
-        }
-        }
-
-        function prevQuestion () { // eslint-disable-line no-unused-vars
-        if (prevAnswer == null) {
-            return
-        }
-        qi--
-        a -= prevAnswer * questions[`question_${qn[qi]}`].a
-        b -= prevAnswer * questions[`question_${qn[qi]}`].b
-        c -= prevAnswer * questions[`question_${qn[qi]}`].c
-        d -= prevAnswer * questions[`question_${qn[qi]}`].d
-        e -= prevAnswer * questions[`question_${qn[qi]}`].e
-        prevAnswer = null
-        initQuestion()
-        }
-
-        function calcScore (score, max) {
-        return (100 * (max + score) / (2 * max)).toFixed(1)
-        }
-
-        function populateQn() {
-            // Fill with incrementing numbers representing question numbers.
-            for (let questionCount = 0; questionCount < Object.size(questions); questionCount++) {
-                qn.push(questionCount)
+        function init_question() {
+            document.getElementById("question-text").innerHTML = questions[qn].question;
+            document.getElementById("question-number").innerHTML = "Question " + (qn + 1) + " of " + (questions.length);
+            if (qn == 0) {
+                document.getElementById("back_button").style.display = 'none';
+                document.getElementById("back_button_off").style.display = 'block';
+            } else {
+                document.getElementById("back_button").style.display = 'block';
+                document.getElementById("back_button_off").style.display = 'none';
             }
-            // Shuffle qn
-            for (let currentIndex = Object.size(questions) - 1; currentIndex > 0; currentIndex--) {
-                randomIndex = Math.floor(Math.random() * currentIndex)
-                
-                // Swap question order
-                let temp = qn[currentIndex]
-                qn[currentIndex] = qn[randomIndex]
-                qn[randomIndex] = temp
+    
+        }
+    
+        function next_question(mult) {
+            spirsec_array[qn] = mult*questions[qn].effect.spirsec
+            idmor_array[qn] = mult*questions[qn].effect.idmor
+            inhalt_array[qn] = mult*questions[qn].effect.inhalt
+            rewsyn_array[qn] = mult*questions[qn].effect.rewsyn
+            asslib_array[qn] = mult*questions[qn].effect.asslib
+            qn++;
+            if (qn < questions.length) {
+                init_question();
+            } else {
+                results();
             }
         }
-
-        function results () {
-        window.location.href = 'results.html' +
-                        `?a=${calcScore(a, maxA)}` +
-                        `&b=${calcScore(b, maxB)}` +
-                        `&c=${calcScore(c, maxC)}` +
-                        `&d=${calcScore(d, maxD)}` +
-                        `&e=${calcScore(e, maxE)}` 
+    
+        function prev_question() {
+            if (qn == 0) {
+                return;
+            }
+            qn--;
+            init_question();
         }
-        loadTranslation().then(() => {
-        initQuestion()
-        for (let i = 0; i < Object.size(questions); i++) {
-            maxA += Math.abs(questions[`question_${i}`].a)
-            maxB += Math.abs(questions[`question_${i}`].b)
-            maxC += Math.abs(questions[`question_${i}`].c)
-            maxD += Math.abs(questions[`question_${i}`].d)
-            maxE += Math.abs(questions[`question_${i}`].e)
+    
+        function calc_score(score,max) {
+            return (100*(max+score)/(2*max)).toFixed(1)
         }
-        })
+    
+        function results() {
+            let final_spirsec = spirsec_array.reduce((a, b) => a + b, 0)
+            let final_idmor = idmor_array.reduce((a, b) => a + b, 0)
+            let final_inhalt = inhalt_array.reduce((a, b) => a + b, 0)
+            let final_rewsyn = rewsyn_array.reduce((a, b) => a + b, 0)
+            let final_asslib = asslib_array.reduce((a, b) => a + b, 0)
+            location.href = `results.html`
+                + `?secular=${calc_score(final_spirsec,max_spirsec)}`
+                + `&ideal=${calc_score(final_idmor,max_idmor)}`
+                + `&alterhuman=${calc_score(final_inhalt,max_inhalt)}`
+                + `&rewilding=${calc_score(final_rewsyn,max_rewsyn)}`
+                + `&assimilation=${calc_score(final_asslib,max_asslib)}`
+        }
+//            + `?secular=${calc_score(final_econ,max_econ)}`
+//            + `&ideal=${calc_score(final_dipl,max_dipl)}`
+//            + `&alterhuman=${calc_score(final_govt,max_govt)}`
+//            + `&rewilding=${calc_score(final_scty,max_scty)}`
+//            + `&assimilation=${calc_score(final_scty,max_scty)}`
     </script>
 </body>
 

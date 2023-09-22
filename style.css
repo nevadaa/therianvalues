@@ -125,6 +125,17 @@ img.center {
     margin: -2px auto;
     cursor: pointer;
 }
+.button:hover, .button:focus { background: #1687e0; }
+.stronglyAgree { background: #1b5e20; }
+.stronglyAgree:hover, .stronglyAgree:focus { background: #154a19; }
+.agree { background: #4caf50; }
+.agree:hover, .agree:focus { background: #29942e; }
+.neutral { background: #949494; }
+.neutral:hover, .neutral:focus { background: #656565; }
+.disagree { background: #f44336; }
+.disagree:hover, .disagree:focus { background: #d6271a; }
+.stronglyDisagree { background: #b71c1c; }
+.stronglyDisagree:hover, .stronglyDisagree:focus { background: #a00e0e; }
 
 .small_button,
 .small_button_off {
@@ -180,6 +191,13 @@ div.text-wrapper {
     font-size: 36pt;
     line-height: 36pt;
     color: #dddddd;
+    display: inline-block;
+}
+div.text-wrapper-invert {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36pt;
+    line-height: 36pt;
+    color: #616161;
     display: inline-block;
 }
 
@@ -264,4 +282,14 @@ canvas {
     right: 10em;
     font-size: 20px;
     top: 1em;
+}
+#banner {
+    border-color: #444444;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8pt;
+    display: block;
+    margin: 8pt;
+    margin-left: auto;
+    margin-right: auto;
 }
