@@ -299,4 +299,24 @@ questions = [
           "asslib": 10
       }
   },
+  {
+    "question": "I find humanity vile as a whole and wish we could go without them.",
+    "effect": {
+        "spirsec": 0,
+        "idmor": 0,
+        "inhalt": 1,
+        "rewsyn": 5,
+        "asslib": -10
+    }
+},
+{
+    "question": "I would partake in an insurrection against a government that wishes to exterminate my kind.",
+    "effect": {
+        "spirsec": 1,
+        "idmor": 0,
+        "inhalt": 2,
+        "rewsyn": 5,
+        "asslib": -10
+    }
+},
 ];
