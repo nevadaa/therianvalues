@@ -42,7 +42,7 @@
     </div>
     <h2>Community Axis: <span class="weight-300" id="community-label"></span></h2>
     <div class="axis">
-        <img id="img-rewilding" src="value_images/rewilding.png" height="128pt"/>
+        <img id="img-rewilding" src="value_images/Rewilding.png" height="128pt"/>
         <div class="bar rewilding" id="bar-rewilding"><div class="text-wrapper" id="rewilding"></div></div>
         <div class="bar synthesis" id="bar-synthesis"><div class="text-wrapper" id="synthesis"></div></div>
         <img id="img-synthesis" src="value_images/synthesis.png" height="128pt"/>
@@ -125,14 +125,6 @@
         document.getElementById("community-label").innerHTML = setLabel(synthesis, communityArray)
         document.getElementById("society-label").innerHTML = setLabel(assimilation, societyArray)
     
-        function createImage(src, x, y, w, h) {
-            img = new Image ()
-            img.src = src
-            img.onLoad = function() {
-                ctx.drawImage(img, x, y, w, h)
-            }
-        }
-    
         window.onload = function() {
             var c = document.createElement("canvas")
             var ctx = c.getContext("2d")
@@ -213,6 +205,14 @@
     
             document.getElementById("banner").src = c.toDataURL();
         }
+        function createImage(src, x, y, w, h) {
+            img = new Image ()
+            img.src = src
+            img.onLoad = function() {
+                ctx.drawImage(img, x, y, w, h)
+            }
+        }
+    
         </script>
     </body>
     
