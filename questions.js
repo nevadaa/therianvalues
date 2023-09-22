@@ -5,7 +5,7 @@ questions = [
           "spirsec": 10,
           "idmor": -2,
           "inhalt": -1,
-          "rewsyn": 5,
+          "rewsyn": -5,
           "asslib": 0
       }
   },
@@ -35,7 +35,7 @@ questions = [
           "spirsec": 10,
           "idmor": -2,
           "inhalt": 0,
-          "rewsyn": 2,
+          "rewsyn": -2,
           "asslib": 0
       }
   },
@@ -75,7 +75,7 @@ questions = [
           "spirsec": -1,
           "idmor": 20,
           "inhalt": 0,
-          "rewsyn": 3,
+          "rewsyn": -3,
           "asslib": 5
       }
   },
@@ -95,7 +95,7 @@ questions = [
           "spirsec": 0,
           "idmor": -15,
           "inhalt": 0,
-          "rewsyn": 5,
+          "rewsyn": -5,
           "asslib": -12
       }
   },
@@ -105,7 +105,7 @@ questions = [
           "spirsec": 3,
           "idmor": 10,
           "inhalt": 20,
-          "rewsyn": -5,
+          "rewsyn": 5,
           "asslib": 4
       }
   },
@@ -115,7 +115,7 @@ questions = [
           "spirsec": 2,
           "idmor": 5,
           "inhalt": 15,
-          "rewsyn": 2,
+          "rewsyn": -2,
           "asslib": -5
       }
   },
@@ -125,7 +125,7 @@ questions = [
           "spirsec": -5,
           "idmor": -5,
           "inhalt": 15,
-          "rewsyn": 10,
+          "rewsyn": -10,
           "asslib": -5
       }
   },
@@ -145,7 +145,7 @@ questions = [
           "spirsec": -1,
           "idmor": 10,
           "inhalt": -15,
-          "rewsyn": 1,
+          "rewsyn": -1,
           "asslib": -5
       }
   },
@@ -155,7 +155,7 @@ questions = [
           "spirsec": 10,
           "idmor": -2,
           "inhalt": -2,
-          "rewsyn": 20,
+          "rewsyn": -20,
           "asslib": 20
       }
   },
@@ -165,7 +165,7 @@ questions = [
           "spirsec": 5,
           "idmor": 0,
           "inhalt": 1,
-          "rewsyn": 15,
+          "rewsyn": -15,
           "asslib": 15
       }
   },
@@ -175,7 +175,7 @@ questions = [
           "spirsec": -5,
           "idmor": 5,
           "inhalt": 0,
-          "rewsyn": 10,
+          "rewsyn": -10,
           "asslib": -20
       }
   },
@@ -185,7 +185,7 @@ questions = [
           "spirsec": 0,
           "idmor": -10,
           "inhalt": 10,
-          "rewsyn": 10,
+          "rewsyn": -10,
           "asslib": 20
       }
   },
@@ -195,7 +195,7 @@ questions = [
           "spirsec": 10,
           "idmor": -5,
           "inhalt": 0,
-          "rewsyn": 15,
+          "rewsyn": -15,
           "asslib": 10
       }
   },
@@ -205,7 +205,7 @@ questions = [
           "spirsec": 1,
           "idmor": 5,
           "inhalt": 10,
-          "rewsyn": 5,
+          "rewsyn": -5,
           "asslib": 10
       }
   },
@@ -265,7 +265,7 @@ questions = [
           "spirsec": 12,
           "idmor": -5,
           "inhalt": -5,
-          "rewsyn": -15,
+          "rewsyn": 15,
           "asslib": 15
       }
   },
@@ -275,7 +275,7 @@ questions = [
           "spirsec": -10,
           "idmor": 5,
           "inhalt": 5,
-          "rewsyn": -5,
+          "rewsyn": 5,
           "asslib": 5
       }
   },
@@ -305,7 +305,7 @@ questions = [
         "spirsec": 0,
         "idmor": 0,
         "inhalt": 1,
-        "rewsyn": -5,
+        "rewsyn": 5,
         "asslib": 10
     }
 },
@@ -315,7 +315,7 @@ questions = [
         "spirsec": 1,
         "idmor": 0,
         "inhalt": 2,
-        "rewsyn": -5,
+        "rewsyn": 5,
         "asslib": 10
     }
 },
