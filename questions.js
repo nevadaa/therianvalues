@@ -262,7 +262,7 @@ questions = [
   {
       "question": "I would have preferred to have been born as an earthly species without conscience than to have been born human.",
       "effect": {
-          "spirsec": -17,
+          "spirsec": -5,
           "idmor": -5,
           "inhalt": -5,
           "rewsyn": -15,
@@ -272,7 +272,7 @@ questions = [
   {
       "question": "I am extremely cautious about how others perceive me, and keep my identity as clear as possible.",
       "effect": {
-          "spirsec": -10,
+          "spirsec": 0,
           "idmor": -5,
           "inhalt": 5,
           "rewsyn": -5,
