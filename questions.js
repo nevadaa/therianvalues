@@ -1,322 +1,332 @@
 questions = [
   {
-      "question": "I believe in reincarnation and that I have been a different species in a different lifetime.",
+      "question": "In some form or another, my alterhumanity derives from a past life or prior existence.",
+      "effect": {
+          "spirsec": -15,
+          "idmor": -5,
+          "inhalt": 0,
+          "rewsyn": 5,
+          "asslib": 0
+      }
+  },
+  {
+      "question": "My alterhuman identity feels like a fact about my soul, not just a psychological condition which could be remedied.",
       "effect": {
           "spirsec": -15,
           "idmor": -5,
           "inhalt": 2,
-          "rewsyn": 5,
-          "asslib": 0
-      }
-  },
-  {
-      "question": "I have the soul of a different being, stuck in the wrong body.",
-      "effect": {
-          "spirsec": -10,
-          "idmor": 0,
-          "inhalt": 0,
-          "rewsyn": 0,
-          "asslib": 0
-      }
-  },
-  {
-      "question": "Fantasizing about fairytales does not help those with species dysphoria right now.",
-      "effect": {
-          "spirsec": 20,
-          "idmor": 20,
-          "inhalt": 0,
           "rewsyn": 0,
           "asslib": 5
       }
   },
   {
-      "question": "Alterhumanity is directly connected to religious or spiritual experiences.",
-      "effect": {
-          "spirsec": -20,
-          "idmor": -2,
-          "inhalt": 0,
-          "rewsyn": -2,
-          "asslib": 0
-      }
-  },
-  {
-      "question": "The concept of alterhumanity can be explained by science and psychology.",
-      "effect": {
-          "spirsec": 20,
-          "idmor": 5,
-          "inhalt": 0,
-          "rewsyn": 0,
-          "asslib": 0
-      }
-  },
-  {
-      "question": "I am terrified of the prospect of turning into my real species.",
-      "effect": {
-          "spirsec": -10,
-          "idmor": -20,
-          "inhalt": 0,
-          "rewsyn": 0,
-          "asslib": 5
-      }
-  },
-  {
-      "question": "The journey, or struggle, is often more rewarding than the end result, when it comes to species dysphoria.",
-      "effect": {
-          "spirsec": 0,
-          "idmor": -18,
-          "inhalt": 0,
-          "rewsyn": 0,
-          "asslib": 4
-      }
-  },
-  {
-      "question": "I would do anything to have any limbs of my real species.",
-      "effect": {
-          "spirsec": -1,
-          "idmor": 18,
-          "inhalt": 0,
-          "rewsyn": -3,
-          "asslib": 5
-      }
-  },
-  {
-      "question": "I often keep my alterhuman identity stashed away, reserved only for those closest to me.",
-      "effect": {
-          "spirsec": 5,
-          "idmor": -8,
-          "inhalt": 0,
-          "rewsyn": 0,
-          "asslib": 15
-      }
-  },
-  {
-      "question": "I don't enjoy the company of most fellow alterhumans, or their politics.",
-      "effect": {
-          "spirsec": 0,
-          "idmor": -15,
-          "inhalt": 0,
-          "rewsyn": -5,
-          "asslib": 20
-      }
-  },
-  {
-      "question": "My species or form does not exist on Earth, or is derived from a story considered fiction.",
-      "effect": {
-          "spirsec": -10,
-          "idmor": -20,
-          "inhalt": -25,
-          "rewsyn": 5,
-          "asslib": 4
-      }
-  },
-  {
-      "question": "I like to imagine my identity as ''void-like'', in the sense that it is incomprehensible to humans.",
-      "effect": {
-          "spirsec": 2,
-          "idmor": 5,
-          "inhalt": -25,
-          "rewsyn": -2,
-          "asslib": 15
-      }
-  },
-  {
-      "question": "I relate to and identify more as artificial objects and robots than organic animals.",
-      "effect": {
-          "spirsec": 10,
-          "idmor": -5,
-          "inhalt": 15,
-          "rewsyn": -10,
-          "asslib": 4
-      }
-  },
-  {
-      "question": "I would be perfectly happy with simple modifications to my human body.",
-      "effect": {
-          "spirsec": 0,
-          "idmor": 5,
-          "inhalt": 35,
-          "rewsyn": 0,
-          "asslib": -5
-      }
-  },
-  {
-      "question": "I consider my identity as ''grounded'', instead of ''fantastical''.",
-      "effect": {
-          "spirsec": -1,
-          "idmor": 10,
-          "inhalt": 15,
-          "rewsyn": 10,
-          "asslib": -5
-      }
-  },
-  {
-      "question": "As nonhumans, we ought to separate from industry and technology to revive our spirit.",
-      "effect": {
-          "spirsec": -20,
-          "idmor": -2,
-          "inhalt": -2,
-          "rewsyn": 20,
-          "asslib": -20
-      }
-  },
-  {
-      "question": "I would quite like to walk on four legs and make animal noises, like barking, yipping and meowing, etc.",
-      "effect": {
-          "spirsec": 5,
-          "idmor": 0,
-          "inhalt": 1,
-          "rewsyn": 20,
-          "asslib": 20
-      }
-  },
-  {
-      "question": "I believe alterhumans and therians can become part of wider society through inclusion and legislation.",
+      "question": "The thought of physically becoming my kintype(s) fills me something closer to dread or fear than joy or comfort.",
       "effect": {
           "spirsec": -5,
-          "idmor": 10,
-          "inhalt": 5,
-          "rewsyn": 20,
-          "asslib": -20
-      }
-  },
-  {
-      "question": "I believe alterhumans and therians must forgo human structures and hierarchy, favoring instead the traditions of our species.",
-      "effect": {
-          "spirsec": 0,
           "idmor": -15,
-          "inhalt": 10,
-          "rewsyn": 15,
-          "asslib": 15
+          "inhalt": 5,
+          "rewsyn": 2,
+          "asslib": -5
       }
   },
   {
-      "question": "Being one with nature is a simple logical conclusion of alterhumanity.",
+      "question": "My alterhumanity is a war I fight alone—a pain I feel, a cross I have to bear—rather than something I'd do something about.",
       "effect": {
-          "spirsec": 10,
-          "idmor": -5,
+          "spirsec": -2,
+          "idmor": -10,
+          "inhalt": 5,
+          "rewsyn": 2,
+          "asslib": -5
+      }
+  },
+  {
+      "question": "Alterhumanity is an entirely psychological and neurological phenomenon which can be remedied.",
+      "effect": {
+          "spirsec": 15,
+          "idmor": 15,
           "inhalt": 0,
-          "rewsyn": 25,
-          "asslib": 20
+          "rewsyn": 10,
+          "asslib": 5
       }
   },
   {
-      "question": "I have been unable to relate to most human beings around me.",
-      "effect": {
-          "spirsec": 1,
-          "idmor": 5,
-          "inhalt": 10,
-          "rewsyn": -5,
-          "asslib": 10
-      }
-  },
-  {
-      "question": "I use the Internet and/or VR experiences as a form of self-expression for long periods of time.",
-      "effect": {
-          "spirsec": 0,
-          "idmor": 0,
-          "inhalt": 10,
-          "rewsyn": 0,
-          "asslib": 15
-      }
-  },
-  {
-      "question": "I enjoy engaging in alterhuman Discord servers, chat groups, etc.",
+      "question": "I would pursue significant physical modification to more closely resemble my kintype, regardless of the ethics or safety.",
       "effect": {
           "spirsec": 0,
           "idmor": 15,
           "inhalt": 0,
-          "rewsyn": 5,
-          "asslib": 10
+          "rewsyn": 15,
+          "asslib": -2
       }
   },
   {
-      "question": "My alterhuman or therian identity is so obscure that I've met less than 5 folks with it.",
+      "question": "Biotechnology will liberate alterhumans from the tyranny of the human body and allow true species transitions.",
       "effect": {
           "spirsec": 0,
-          "idmor": -18,
-          "inhalt": -25,
-          "rewsyn": 0,
-          "asslib": 15
+          "idmor": 15,
+          "inhalt": 0,
+          "rewsyn": 15,
+          "asslib": -7
       }
   },
   {
-      "question": "I have radical politics.",
+      "question": "I cannot identify or feel comfortable with any human national culture.",
       "effect": {
           "spirsec": 0,
           "idmor": 0,
-          "inhalt": -12,
-          "rewsyn": -6,
-          "asslib": 15
+          "inhalt": -15,
+          "rewsyn": -9,
+          "asslib": 0
       }
   },
   {
-      "question": "I consider my alterhumanity to be a sin, and would wish to suppress it.",
+      "question": "I have little empathy for human ethics and the moral frameworks that humans impose upon one another.",
       "effect": {
           "spirsec": 0,
-          "idmor": -20,
-          "inhalt": -4,
-          "rewsyn": 0,
-          "asslib": -20
+          "idmor": 0,
+          "inhalt": -15,
+          "rewsyn": -7,
+          "asslib": 0
       }
   },
   {
-      "question": "I would have preferred to have been born as an earthly species without conscience than to have been born human.",
+      "question": "I would be deeply uncomfortable with the idea that I do not deserve “human rights” as a therian.",
       "effect": {
-          "spirsec": -5,
-          "idmor": -5,
-          "inhalt": -5,
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 5,
+          "rewsyn": 5,
+          "asslib": -10
+      }
+  },
+  {
+      "question": "I am a person.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 12,
+          "rewsyn": 10,
+          "asslib": 0
+      }
+  },
+  {
+      "question": "Despite my identity, I consider myself proud of my country of birth.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 2,
+          "inhalt": 10,
+          "rewsyn": 10,
+          "asslib": -10
+      }
+  },
+  {
+      "question": "Industrial society is cruel and I must stay as far away from it as possible to be myself.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 1,
           "rewsyn": -15,
           "asslib": 15
       }
   },
   {
-      "question": "I am extremely cautious about how others perceive me, and keep my identity as clear as possible.",
+      "question": "Digital spaces, virtual reality, online group chats, forums are the ideal form of expressing my identity.",
       "effect": {
           "spirsec": 0,
-          "idmor": -5,
-          "inhalt": 5,
-          "rewsyn": -5,
-          "asslib": -20
+          "idmor": 0,
+          "inhalt": -10,
+          "rewsyn": 15,
+          "asslib": 0
       }
   },
   {
-      "question": "I often use meditation, crystals, homeopathies and other alternative medicine to alleviate my species dysphoria.",
+      "question": "Civilisation collapsing in on itself would be awesome, actually.",
       "effect": {
-          "spirsec": -30,
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": -15,
+          "rewsyn": -15,
+          "asslib": 15
+      }
+  },
+  {
+      "question": "There is little I would do to not help a political candidate that advocates for our kind in Congress or elsewhere.",
+      "effect": {
+          "spirsec": 4,
+          "idmor": 0,
+          "inhalt": 10,
+          "rewsyn": 0,
+          "asslib": -15
+      }
+  },
+  {
+      "question": "Fighting for our rights in human systems is completely pointless.",
+      "effect": {
+          "spirsec": -3,
+          "idmor": 0,
+          "inhalt": -10,
+          "rewsyn": 0,
+          "asslib": 15
+      }
+  },
+  {
+      "question": "Actual political advocacy, ranging from pressure groups, think tanks, being publicly visible, lobbying candidates—is worth doing.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 15,
+          "rewsyn": 0,
+          "asslib": -15
+      }
+  },
+  {
+      "question": "I frequently fantasise about a civil war or collapse of the West so that I may seclude myself into a compound with fellow nonhumans.",
+      "effect": {
+          "spirsec": -5,
+          "idmor": 0,
+          "inhalt": -5,
+          "rewsyn": -15,
+          "asslib": -15
+      }
+  },  
+  {
+      "question": "My nonhumanity is most vivid when in an altered state derived from rituals, meditation, or substance use.",
+      "effect": {
+          "spirsec": -15,
+          "idmor": 0,
+          "inhalt": 0,
+          "rewsyn": 0,
+          "asslib": 0
+      }
+  },  
+  {
+      "question": "My understanding of my kintypes is casual and relaxed; I generally do not consider myself non-negotiably only one kintype.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 5,
+          "rewsyn": 0,
+          "asslib": -5
+      }
+  },  
+  {
+      "question": "I reject the usage of the word “kintype” and instead use “species”, as it cannot be changed from what I really am.",
+      "effect": {
+          "spirsec": -4,
+          "idmor": 0,
+          "inhalt": 5,
+          "rewsyn": -15,
+          "asslib": 5
+      }
+  },  
+  {
+      "question": "The mourning pain which I carry of being bodily human is acceptable compared to what would happen if we were experimented on by science for morphological “freedom”.",
+      "effect": {
+          "spirsec": 0,
           "idmor": -15,
+          "inhalt": 0,
+          "rewsyn": -5,
+          "asslib": 10
+      }
+  },  
+  {
+      "question": "I want the body of my kintype. I am largely indifferent to the means by which that might one day be achieved.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 15,
+          "inhalt": 0,
+          "rewsyn": 0,
+          "asslib": 0
+      }
+  },  
+  {
+      "question": "I have learned to make peace with my body as the social reality of what morphological freedom would actually look like is not appealing.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": -15,
+          "inhalt": 0,
+          "rewsyn": 0,
+          "asslib": 0
+      }
+  },
+  {
+      "question": "I would partake in an insurrection against a government that wishes to exterminate my kind.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": 0,
+          "rewsyn": -5,
+          "asslib": 15
+      }
+  },
+  {
+      "question": "I would feel no remorse in committing terrorism against human society.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": -15,
+          "inhalt": 0,
+          "rewsyn": -10,
+          "asslib": 15
+      }
+  },
+  {
+      "question": "I have been unable to relate to most human beings around me on almost all issues.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": -5,
+          "inhalt": 0,
+          "rewsyn": -4,
+          "asslib": 0
+      }
+  },
+  {
+      "question": "I find humanity vile as a whole and wish we could go without them.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": -2,
           "inhalt": 0,
           "rewsyn": -10,
           "asslib": 0
       }
   },
   {
-      "question": "I do not own any clothing, acessories or costumes which help express my true species.",
+      "question": "I would have preferred to have been born as an earthly species without conscience than to have been born human.",
       "effect": {
           "spirsec": 0,
-          "idmor": -15,
-          "inhalt": 15,
-          "rewsyn": 0,
-          "asslib": -10
+          "idmor": 0,
+          "inhalt": 0,
+          "rewsyn": -10,
+          "asslib": 0
       }
   },
   {
-    "question": "I find humanity vile as a whole and wish we could go without them.",
-    "effect": {
-        "spirsec": 0,
-        "idmor": 0,
-        "inhalt": -10,
-        "rewsyn": 25,
-        "asslib": 20
-    }
-},
-{
-    "question": "I would partake in an insurrection against a government that wishes to exterminate my kind.",
-    "effect": {
-        "spirsec": 0,
-        "idmor": 0,
-        "inhalt": -20,
-        "rewsyn": -15,
-        "asslib": 15
-    }
-},
+      "question": "I consider my alterhumanity to be some kind of sin or cosmic mistake.",
+      "effect": {
+          "spirsec": -5,
+          "idmor": -5,
+          "inhalt": 0,
+          "rewsyn": 0,
+          "asslib": -5
+      }
+  },
+  {
+      "question": "I've met less than 5 other beings with the same kintype as me.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": 0,
+          "inhalt": -10,
+          "rewsyn": 0,
+          "asslib": 0
+      }
+  },
+  {
+      "question": "I identify more with artificial objects, robots or eldritch beings rather than organic animals.",
+      "effect": {
+          "spirsec": 0,
+          "idmor": -9,
+          "inhalt": -10,
+          "rewsyn": 0,
+          "asslib": 0
+      }
+  }
 ];
