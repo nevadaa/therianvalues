@@ -180,7 +180,7 @@ questions = [
       }
   },
   {
-      "question": "I frequently fantasise about a civil war or collapse of the West so that I may seclude myself into a compound with fellow nonhumans.",
+      "question": "I frequently fantasise about a civil war or the collapse of the West so that I may seclude myself into a compound with fellow nonhumans.",
       "effect": {
           "spirsec": -5,
           "idmor": 0,
