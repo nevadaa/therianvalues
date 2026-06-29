@@ -40,7 +40,7 @@ questions = [
       }
   },
   {
-      "question": "Alterhumanity is an entirely psychological and neurological phenomenon which can be remedied.",
+      "question": "Alterhumanity is an entirely psychological and neurological phenomenon which can be remedied with physical treatment.",
       "effect": {
           "spirsec": 15,
           "idmor": 15,
@@ -152,7 +152,7 @@ questions = [
   {
       "question": "There is little I would do to not help a political candidate that advocates for our kind in Congress or elsewhere.",
       "effect": {
-          "spirsec": 4,
+          "spirsec": 0,
           "idmor": 0,
           "inhalt": 10,
           "rewsyn": 0,
@@ -182,7 +182,7 @@ questions = [
   {
       "question": "I frequently fantasise about a civil war or the collapse of the West so that I may seclude myself into a compound with fellow nonhumans.",
       "effect": {
-          "spirsec": -5,
+          "spirsec": 0,
           "idmor": 0,
           "inhalt": -5,
           "rewsyn": -15,
