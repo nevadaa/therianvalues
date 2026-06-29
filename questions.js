@@ -2,7 +2,7 @@ questions = [
   {
       "question": "In some form or another, my alterhumanity derives from a past life or prior existence.",
       "effect": {
-          "spirsec": -15,
+          "spirsec": 15,
           "idmor": -5,
           "inhalt": 0,
           "rewsyn": 5,
@@ -12,7 +12,7 @@ questions = [
   {
       "question": "My alterhuman identity feels like a fact about my soul, not just a psychological condition which could be remedied.",
       "effect": {
-          "spirsec": -15,
+          "spirsec": 15,
           "idmor": -5,
           "inhalt": 2,
           "rewsyn": 0,
@@ -22,7 +22,7 @@ questions = [
   {
       "question": "The thought of physically becoming my kintype(s) fills me something closer to dread or fear than joy or comfort.",
       "effect": {
-          "spirsec": -5,
+          "spirsec": 5,
           "idmor": -15,
           "inhalt": 5,
           "rewsyn": 2,
@@ -32,7 +32,7 @@ questions = [
   {
       "question": "My alterhumanity is a war I fight alone—a pain I feel, a cross I have to bear—rather than something I'd do something about.",
       "effect": {
-          "spirsec": -2,
+          "spirsec": 2,
           "idmor": -10,
           "inhalt": 5,
           "rewsyn": 2,
@@ -42,7 +42,7 @@ questions = [
   {
       "question": "Alterhumanity is an entirely psychological and neurological phenomenon which can be remedied with physical treatment.",
       "effect": {
-          "spirsec": 15,
+          "spirsec": -15,
           "idmor": 15,
           "inhalt": 0,
           "rewsyn": 10,
@@ -162,7 +162,7 @@ questions = [
   {
       "question": "Fighting for our rights in human systems is completely pointless.",
       "effect": {
-          "spirsec": -3,
+          "spirsec": 3,
           "idmor": 0,
           "inhalt": -10,
           "rewsyn": 0,
@@ -192,7 +192,7 @@ questions = [
   {
       "question": "My nonhumanity is most vivid when in an altered state derived from rituals, meditation, or substance use.",
       "effect": {
-          "spirsec": -15,
+          "spirsec": 15,
           "idmor": 0,
           "inhalt": 0,
           "rewsyn": 0,
@@ -212,7 +212,7 @@ questions = [
   {
       "question": "I reject the usage of the word “kintype” and instead use “species”, as it cannot be changed from what I really am.",
       "effect": {
-          "spirsec": -4,
+          "spirsec": 4,
           "idmor": 0,
           "inhalt": 5,
           "rewsyn": -15,
@@ -302,7 +302,7 @@ questions = [
   {
       "question": "I consider my alterhumanity to be some kind of sin or cosmic mistake.",
       "effect": {
-          "spirsec": -5,
+          "spirsec": 5,
           "idmor": -5,
           "inhalt": 0,
           "rewsyn": 0,
