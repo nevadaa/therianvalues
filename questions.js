@@ -260,7 +260,7 @@ questions = [
       }
   },
   {
-      "question": "I would feel no remorse in committing terrorism against human society.",
+      "question": "I would feel no remorse in doing riots against human society.",
       "effect": {
           "spirsec": 0,
           "idmor": -15,
