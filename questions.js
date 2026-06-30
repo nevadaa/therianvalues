@@ -150,7 +150,7 @@ questions = [
       }
   },
   {
-      "question": "There is little I would do to not help a political candidate that advocates for our kind in Congress or elsewhere.",
+      "question": "There is little I would not do to help a political candidate that advocates for our kind in Congress or elsewhere.",
       "effect": {
           "spirsec": 0,
           "idmor": 0,
